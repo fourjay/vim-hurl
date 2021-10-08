@@ -1,1 +1,1 @@
-autocmd BufRead,BufNewFile .hurl setlocal filetype=hurl
+autocmd BufRead,BufNewFile *.hurl setlocal filetype=hurl
