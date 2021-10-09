@@ -4,20 +4,45 @@ elseif exists('b:current_syntax')
   finish
 endif
 
-syn case ignore
-
-syn keyword hurl_keywords 
+syn keyword hurl_methods
             \ GET
             \ POST
+            \ PUT
+            \ DELETE
+            \ CONNECT
+            \ OPTIONS
+            \ TRACE
+            \ PATCH
+hi def link hurl_methods Constant
+
+syn keyword hurl_keywords 
+            \ body
             \ cookie
             \ duration
-            \ exists
             \ header
+            \ jsonpath
+            \ regex
+            \ sha256
+            \ status
             \ xpath
 
 hi def link hurl_keywords keyword
 
-syntax match hurl_section '\[Asserts\]'
+syn keyword hurl_predicates
+            \ startsWith
+            \ endsWith
+            \ exists
+            \ includes
+            \ isBoolean
+            \ isCollection
+            \ isFloat
+            \ isInteger
+            \ isString
+            \ matches
+
+hi def link hurl_predicates Type
+
+syntax match hurl_section '\v\[(Asserts|Captures|FormParams)\]'
 hi def link hurl_section PreProc
 
 syntax match hurl_url '\vhttp[s]*:\/\/\f+'
@@ -27,4 +52,4 @@ syntax match hurl_comment '#.*'
 hi def link hurl_comment Comment
 
 
-let b:current_syntax = 'jrnl'
+let b:current_syntax = 'hurl'
