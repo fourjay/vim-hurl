@@ -84,7 +84,9 @@ hi def link hurl_url Character
 syntax match hurl_comment '#.*$'
 hi def link hurl_comment Comment
 
-syntax region hurl_string start='"' end='"'
+syntax match hurl_escaped_hashmark "\\#"
+syntax match hurl_escaped_quote "\\\""
+syntax region hurl_string start='"' end='"' contains=hurl_escaped_quote
 hi def link hurl_string String
 
 let b:current_syntax = 'hurl'
