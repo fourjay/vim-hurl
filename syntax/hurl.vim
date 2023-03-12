@@ -44,9 +44,11 @@ syn keyword hurl_keywords
             \ jsonpath
             \ regex
             \ sha256
+            \ md5
             \ status
             \ xpath
-
+            \ duration
+            \ bytes
 hi def link hurl_keywords keyword
 
 syn keyword hurl_predicates
@@ -63,7 +65,9 @@ syn keyword hurl_predicates
 syntax match hurl_predicate "contains"
 hi def link hurl_predicates Type
 
-syntax match hurl_section '\v\[(Asserts|Captures|FormParams)\]'
+syntax match hurl_section '\v\[(Asserts|Captures|Options)\]'
+syntax match hurl_section '\v\[(FormParams|MultipartFormData)\]'
+syntax match hurl_section '\v\[(Cookies|QueryStringParams)\]'
 hi def link hurl_section PreProc
 
 syntax match hurl_url '\vhttp[s]*:\/\/\f+'
