@@ -73,7 +73,7 @@ hi def link hurl_section PreProc
 syntax match hurl_url '\vhttp[s]*:\/\/\f+'
 hi def link hurl_url Character
 
-syntax match hurl_comment '#.*'
+syntax match hurl_comment '#.*$'
 hi def link hurl_comment Comment
 
 syntax region hurl_string start='"' end='"'
