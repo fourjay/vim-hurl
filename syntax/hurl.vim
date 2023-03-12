@@ -25,6 +25,17 @@ syntax match hurl_url "\S\+" contained
 hi def link hurl_methods Constant
 hi def link hurl_url Identifier
 
+syntax keyword hurl_filter
+            \ count
+            \ regex
+            \ urlEncode
+            \ urlDecode
+            \ htmlEscape
+            \ htmlUnescape
+hi def link hurl_filter Operator
+syn keyword hurl_operator == != > >= < <= not
+hi def link hurl_operator Operator
+
 syn keyword hurl_keywords 
             \ body
             \ cookie
