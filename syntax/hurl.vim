@@ -13,6 +13,13 @@ syn keyword hurl_methods
             \ OPTIONS
             \ TRACE
             \ PATCH
+            \ LINK
+            \ UNLINK
+            \ PURGE
+            \ LOCK
+            \ UNLOCK
+            \ PROPFIND
+            \ VIEW
 hi def link hurl_methods Constant
 
 syn keyword hurl_keywords 
