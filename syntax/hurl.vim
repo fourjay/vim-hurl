@@ -20,7 +20,10 @@ syn keyword hurl_methods
             \ UNLOCK
             \ PROPFIND
             \ VIEW
+            \ nextgroup=hurl_url skipwhite
+syntax match hurl_url "\S\+" contained
 hi def link hurl_methods Constant
+hi def link hurl_url Identifier
 
 syn keyword hurl_keywords 
             \ body
