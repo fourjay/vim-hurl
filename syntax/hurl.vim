@@ -63,12 +63,20 @@ syn keyword hurl_predicates
             \ isString
             \ matches
 syntax match hurl_predicate "contains"
-hi def link hurl_predicates Type
+hi def link hurl_predicate Type
+
+syn match hurl_http_version
+            \ "\vHTTP/([*]|1\.0|1\.1|2)"
+            \ nextgroup=hurl_status skipwhite
+syntax match hurl_status "[0-9]\+" contained
+hi def link hurl_version Statement
+hi def link hurl_status Number
 
 syntax match hurl_section '\v\[(Asserts|Captures|Options)\]'
 syntax match hurl_section '\v\[(FormParams|MultipartFormData)\]'
 syntax match hurl_section '\v\[(Cookies|QueryStringParams)\]'
 hi def link hurl_section PreProc
+
 
 syntax match hurl_url '\vhttp[s]*:\/\/\f+'
 hi def link hurl_url Character
