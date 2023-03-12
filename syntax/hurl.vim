@@ -60,7 +60,7 @@ syn keyword hurl_predicates
             \ isInteger
             \ isString
             \ matches
-
+syntax match hurl_predicate "contains"
 hi def link hurl_predicates Type
 
 syntax match hurl_section '\v\[(Asserts|Captures|FormParams)\]'
