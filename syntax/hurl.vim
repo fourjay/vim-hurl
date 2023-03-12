@@ -89,4 +89,7 @@ syntax match hurl_escaped_quote "\\\""
 syntax region hurl_string start='"' end='"' contains=hurl_escaped_quote
 hi def link hurl_string String
 
+syntax region hurl_template start='{{' end='}}'
+hi def link hurl_template Identifier
+
 let b:current_syntax = 'hurl'
